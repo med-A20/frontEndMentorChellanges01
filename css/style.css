@@ -1,0 +1,176 @@
+/* ====================== typographie ================= */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s ease-in-out;
+}
+html{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+/* ====================== typographie ================= */
+                /* ======  start color / var =========== */
+  :root{
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%)
+  }
+  
+                /* ======  end color / var =========== */
+
+
+/* ********* start mobile *************** */
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 300px;
+    height: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 30% 20% 20%;
+    grid-template-areas: "img" "wrd" "plan" "btn";
+    background-color: var(--veryPaleBlue);
+    border-radius: 22px;
+}
+.cardImg{
+    grid-area: img;
+    width: 100%;
+    
+}
+.cardImg img{
+    width: 100%;
+    height: 100%;
+}
+.words {
+    grid-area: wrd;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.words h1 {
+    text-transform: capitalize;
+    color: var(--darkBlue);
+    font-size: 1.39rem;
+    font-weight: 900;
+    margin: 20px 0 15px;
+}
+.words p {
+    text-align: center;
+    color: var(--desaturatedBlue);
+    font-size: 0.89rem;
+    font-weight: 500;
+    word-spacing: 1px;
+    line-height: 1.9;
+}
+
+.music{
+    grid-area: plan;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.plan{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+.pln{
+    margin-left: 16px;
+}
+.pln p:first-child {
+    color: var(--darkBlue);
+    font-size: .9rem;
+    font-weight: 900;
+    margin-bottom: 2px;
+    text-transform: capitalize;
+}
+.pln p:last-child {
+    color: var(--darkBlue);
+    font-size: .9rem;
+    font-weight: 100;
+}
+
+.change p {
+    color: var(--brightBlue);
+    font-weight: 700;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-size: .79rem;
+    transition: .8s;
+}
+.change p:hover{
+    text-decoration: none;
+    opacity: 80%;
+    cursor: grab;
+}
+footer{
+    grid-area: btn;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+.btn {
+    width: 85%;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: .75rem;
+}
+footer .pymnt{
+    background-color: var(--brightBlue);
+    color: var(--paleBlue);
+    box-shadow: 0 4px 15px var(--desaturatedBlue)
+}
+.pymnt:hover{
+    opacity: 80%;
+    cursor: grab;
+}
+
+footer .cncl{
+    background-color: transparent;
+    color: var(--desaturatedBlue);
+}
+.cncl:hover{
+    color: var(--darkBlue);
+    cursor: grab;
+}
+/* ********* end mobile *************** */
+
+/* =============== start desktop mobile =============== */
+
+@media(min-width:375px){
+    .container{
+        background-image: url(../images/pattern-background-desktop.svg);
+    }
+}
+/* =============== end desktop mobile =============== */
